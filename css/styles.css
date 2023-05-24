@@ -90,7 +90,6 @@ p {
     display: flex;
     align-items: center;
     /* justify-content: space-between; */
-    width: 100%;
 }
 
 .logo {
@@ -147,11 +146,39 @@ p {
     transform: translateY(0);
 }
 
-.menu-container .menu-toggle {
+.menu-container .menu-toggle-close {
     position: absolute;
-    top: 16px;
-    right: 16px;
-    color: var(--title-text-color);
+    top: 24px;
+    right: 24px;
+    
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: transparent;
+    
+    cursor: pointer;
+    
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    
+    transition: background-color 250ms var(--time-function),
+                border 250ms var(--time-function)
+}
+
+.menu-container .menu-toggle-close {
+    fill: currentColor;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-container .menu-toggle-close:hover,
+.menu-container .menu-toggle-close:focus {
+    color: var(--primary-white-color);
+    background-color: var(--links-hover-color);
+    border: none;
 }
 
 .mobile-menu {
@@ -178,6 +205,12 @@ p {
     font-size: 36px;
     line-height: 1.11;
     letter-spacing: 0.02em;
+
+    transition: color 250ms var(--time-function);
+}
+
+.mobile-nav .link:hover {
+    color:var(--links-hover-color)
 }
 
 .mobile-nav .item:not(:last-child) {
@@ -191,12 +224,24 @@ p {
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
-    color: var(--primary-text-color)
+    color: var(--primary-text-color);
+    transition: color 250ms var(--time-function);
+    
+    
+}
+
+.mobile-info .link:hover {
+    color: var(--links-hover-color);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
 }
 
 .mobile-info .item:not(:last-child) {
     margin-bottom: 40px;
 }
+
+
 
 .mobile-info .mobile-menu {
     padding-bottom: 48px;
@@ -250,6 +295,7 @@ p {
 
     .site-nav {
         justify-content: space-between;
+        width: 100%;
     }
 }
 
@@ -353,13 +399,17 @@ p {
 @media screen and (min-width:1158px) {
     .info .list {
         flex-direction: row;
-        padding-top: 24px;
-        padding-bottom: 24px;   
-        margin: 0;     
+        margin: 0;
+        margin-left: auto;     
     }
 
     .info .link{
         font: inherit;
+    }
+
+    .info .item {
+        padding-top: 24px;
+        padding-bottom: 24px;
     }
    
     .info .item:not(:last-child) {
@@ -680,7 +730,7 @@ p {
     margin-bottom: 8px;
 }
 
-.list-social {
+.team .list-social {
     justify-content: center;
     gap: 24px;
 }
@@ -860,7 +910,10 @@ p {
 }
 
  .footer .list-social{
+    justify-content: center;
     gap: 16px;
+    
+
 } 
 
 .footer-social {
