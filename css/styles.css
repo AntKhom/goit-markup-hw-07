@@ -481,9 +481,9 @@ p {
 /* main */
 /* Hero section 1*/
 .hero {
-    padding-top: 188px;
-    padding-bottom: 188px;
-    height: 600px;
+    padding-top: 112px;
+    padding-bottom: 112px;
+    height: 432px;
     max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
@@ -517,6 +517,7 @@ p {
 
 @media screen and (min-width:768px) {
     .hero {
+        height: 436px;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
             url('../images/people-office-tab.jpg');
@@ -531,6 +532,9 @@ p {
 
 @media screen and (min-width:1158px) {
     .hero {
+        padding-top: 188px;
+        padding-bottom: 188px;
+        height: 600px;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
             url('../images/people-office.jpg');
@@ -684,10 +688,10 @@ screen and (min-resolution:2dppx) and (min-width:1158px) {
     
     .advant .item {
         width: calc((100% - 72px) / 4);
-        margin: 0;
     }
 
     .advant .item:not(:last-child) {
+        margin: 0;
         margin-right: 24px;
     }
 }
@@ -890,6 +894,11 @@ screen and (min-resolution:2dppx) and (min-width:1158px) {
        width: calc((100% - 120px) / 6);
     }
 
+    .customers .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
 }
 
 .customers .link {
@@ -934,59 +943,7 @@ screen and (min-resolution:2dppx) and (min-width:1158px) {
     text-align: center;
 }
 
-@media screen and (min-width:768px) {
-    .footer .container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content:flex-start;
-        align-items: baseline;
-        text-align: left;
-        padding-left: 108px; 
-        padding-right: 108px;
-    }
-    
-    .subscribe .form {
-        display: flex;
-        align-items: flex-start;
-    }
 
-    .footer-social {
-        margin-left: 24px;
-    }
-
-    .subscribe .mail {
-        width: 264px;
-    }
-
-
-}
-
-@media screen and (min-width:1158px) {
-    .footer {
-        padding-top: 100px;
-        padding-bottom: 100px;
-    }
-
-    .footer .container {
-        flex-wrap: nowrap;
-        justify-content: center;
-        padding-left: 15px;
-        padding-right: 15px;
-        
-    }
-    
-    .footer-logo {
-        margin: 0;
-    }
-
-    .footer-social {
-        margin-left: 120px;
-    }
-
-    .footer .subscribe {
-        margin-left: 96px;
-    }
-}
 
 
 .footer .logo {
@@ -1054,10 +1011,6 @@ screen and (min-resolution:2dppx) and (min-width:1158px) {
 }
 
 
-.subscribe .label {
-    margin-right: 24px;
-}
-
 .subscribe .mail {
     padding: 8px 16px;
     height: 40px;
@@ -1111,7 +1064,64 @@ screen and (min-resolution:2dppx) and (min-width:1158px) {
     margin-left: 16px;
 }
 
+@media screen and (min-width:768px) {
+    .footer .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: baseline;
+        text-align: left;
+        padding-left: 108px;
+        padding-right: 108px;
+    }
 
+    .subscribe .form {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .footer-social {
+        margin-left: 24px;
+    }
+
+    .subscribe .mail {
+        width: 264px;
+    }
+
+
+    .subscribe .label {
+        margin-right: 24px;
+    }   
+
+}
+
+@media screen and (min-width:1158px) {
+    .footer {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .footer .container {
+        flex-wrap: nowrap;
+        justify-content: center;
+        padding-left: 15px;
+        padding-right: 15px;
+
+    }
+
+    .footer-logo {
+        margin: 0;
+    }
+
+    .footer-social {
+        margin: 0;
+        margin-left: 120px;
+    }
+
+    .footer .subscribe {
+        margin-left: 96px;
+    }
+}
 
 /* Portfolio */
 
